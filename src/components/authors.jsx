@@ -7,9 +7,8 @@ export default class Authors extends React.Component {
   }
 
   render() {
-    const columnMaxLen =
-      this.props.authors.length > 4 ? 3 : this.props.authors.length;
-    const authorClass = `uk-width-1-${columnMaxLen} uk-width-1-${this.props.authors.length}@m`;
+    // 1 column on mobile, 3 on medium screens and up
+    const authorClass = 'uk-width-1-1 uk-width-1-3@m';
     const affliationClass = `uk-width-1-1`;
     return (
       <div>
