@@ -7,7 +7,8 @@ export default class Authors extends React.Component {
   }
 
   render() {
-    const columnMaxLen = this.props.authors.length > 4 ? 3 : this.props.authors.length;
+    const columnMaxLen =
+      this.props.authors.length > 4 ? 3 : this.props.authors.length;
     const authorClass = `uk-width-1-${columnMaxLen} uk-width-1-${this.props.authors.length}@m`;
     const affliationClass = `uk-width-1-1`;
     return (
@@ -39,7 +40,9 @@ export default class Authors extends React.Component {
               </span>
             );
           })}
-          <span className="uk-width-1-1 uk-margin-small-top">{this.props.meta}</span>
+          <span className="uk-width-1-1 uk-margin-small-top">
+            {this.props.meta}
+          </span>
         </div>
       </div>
     );
