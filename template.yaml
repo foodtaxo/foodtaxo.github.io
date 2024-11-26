@@ -146,7 +146,7 @@ body:
               <td>1,297 (3.9%)</td>
             </tr>
             <tr>
-              <td>CheXpert<sup>6</sup></td>
+              <td>CheXpert<sup>1</sup></td>
               <td>223,414</td>
               <td>6 (&lt;0.1%)</td>
               <td>0 (0.0%)</td>
@@ -199,7 +199,7 @@ body:
           </tbody>
         </table>
       </div>
-      <sup>6</sup> Label errors refer to atelectasis detection only since the classification task admits multiple labels, and expert agreement is the highest for this condition.
+      <sup>1</sup> Label errors refer to atelectasis detection only since the classification task admits multiple labels, and expert agreement is the highest for this condition.
       <hr class="solid">
 
       Here we illustrate the rankings by visualizing the top 15 samples of each issue type, namely off-topic samples, near duplicates, and label errors.
