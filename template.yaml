@@ -14,7 +14,7 @@ description: 🧼🔎 A holistic self-supervised data cleaning strategy to detec
 
 image: https://github.com/Digital-Dermatology/SelfClean/raw/main/assets/SelfClean_Teaser.png
 url: https://selfclean.github.io
-speakerdeck: null # speakerdeck slide ID
+speakerdeck: 23f2fb0fde6d45b9b40bb069a3bc6ab5 # speakerdeck slide ID
 authors:
   - name: Fabian Gröger
     affiliation: [1, 2]
@@ -63,7 +63,9 @@ bibtex: >
   @article{groger_selfclean_2024,
     title        = {{Intrinsic Self-Supervision for Data Quality Audits}},
     shorttitle   = {{SelfClean}},
-    author       = {Gr\"oger, Fabian and Lionetti, Simone and Gottfrois, Philippe and Gonzalez-Jimenez, Alvaro and Amruthalingam, Ludovic and Consortium, Labelling and Groh, Matthew and Navarini, Alexander A. and Pouly, Marc},
+    author       = {Gr\"oger, Fabian and Lionetti, Simone and Gottfrois, Philippe 
+                    and Gonzalez-Jimenez, Alvaro and Amruthalingam, Ludovic and Consortium, Labelling 
+                    and Groh, Matthew and Navarini, Alexander A. and Pouly, Marc},
     year         = 2024,
     month        = 12,
     journal      = {Advances in Neural Information Processing Systems (NeurIPS)},
@@ -254,3 +256,15 @@ body:
 
       **Label errors:**
       <img src="assets/fitzpatrick17k_top15_label_errors.png" alt="">
+
+projects: # relevant projects
+  - title: PASSION for Dermatology - Bridging the Diversity Gap with Pigmented Skin Images from Sub-Saharan Africa
+    description: Images of skin diseases in Sub-Saharan countries
+    img: https://passionderm.github.io/static/images/passion1.jpg
+    journal: "MICCAI'24"
+    url: https://passionderm.github.io/
+  - title: Robust T-Loss for Medical Image Segmentation
+    description: New robust loss function, T-Loss, for medical image segmentation
+    img: https://robust-tloss.github.io/static/images/nu_tildes_ablation.png
+    journal: "MICCAI'23"
+    url: https://robust-tloss.github.io/

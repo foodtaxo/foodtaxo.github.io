@@ -30,7 +30,7 @@ export default class Projects extends React.Component {
     return (
       <div className="uk-section">
         <h2 className="uk-heading-line uk-text-center uk-text-bold">
-          <span>Relevant Projects</span>
+          <span>More Research</span>
         </h2>
         {this.props.projects.map((project, idx) => {
           return (

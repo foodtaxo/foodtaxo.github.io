@@ -68,11 +68,11 @@ class Template extends React.Component {
             teaser={data.teaser}
             description={data.description}
           />
+          <Citation bibtex={data.bibtex} />
           <Video video={data.resources.video} />
           <SpeakerDeck dataId={data.speakerdeck} />
           <Body body={data.body} />
-          <Citation bibtex={data.bibtex} />
-          {/* <Projects projects={data.projects} /> */}
+          <Projects projects={data.projects} />
         </div>
         <Footer />
       </div>
