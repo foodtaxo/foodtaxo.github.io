@@ -1,268 +1,61 @@
 theme: default # default || dark
-organization: University of Basel
+organization: Dublin City University
 twitter: null
-title: Intrinsic Self-Supervision for Data Quality Audits
-journal: "NeurIPS'24"
+title: "FoodTaxo: Generating Food Taxonomies with Large Language Models"
+journal: "ACL Industry Track 2025"
 resources:
-  paper: https://nips.cc/virtual/2024/poster/97453
-  arxiv: https://arxiv.org/abs/2305.17048
-  code: https://github.com/Digital-Dermatology/SelfClean
+  paper: null
+  arxiv: null
+  code: https://github.com/wullli/foodtaxo
   video: null
-  demo: https://colab.research.google.com/github/Digital-Dermatology/SelfClean/blob/main/examples/Investigate_Imagenette.ipynb
+  demo: null
   huggingface: null
-description: 🧼🔎 A holistic self-supervised data cleaning strategy to detect irrelevant samples, near duplicates and label errors
+description: Generating and completing food taxonomies using large language models in a taxonomy completion setting.
 
-image: https://github.com/Digital-Dermatology/SelfClean/raw/main/assets/SelfClean_Teaser.png
-url: https://selfclean.github.io
-speakerdeck: 23f2fb0fde6d45b9b40bb069a3bc6ab5 # speakerdeck slide ID
+image: https://github.com/wullli/foodtaxo/raw/main/assets/teaser.png
+url: https://foodtaxo.github.io
 authors:
-  - name: Fabian Gröger
+  - name: Pascal Wullschleger
     affiliation: [1, 2]
-    url: https://fabiangroeger96.github.io/
+    url: null
     position: PhD Student
-  - name: Simone Lionetti
+  - name: Majid Zarharan
     affiliation: [2]
-    position: Researcher
-    url: https://www.hslu.ch/en/lucerne-university-of-applied-sciences-and-arts/about-us/people-finder/profile/?pid=4484
-  - name: Philippe Gottfrois
+    position: PhD Student
+    url: https://zarharan.github.io/
+  - name: Donnacha Daly
     affiliation: [1]
-    position: PhD Student
-    url:
-  - name: Alvaro Gonzalez-Jimenez
+    position: Professor
+    url: https://www.hslu.ch/de-ch/hochschule-luzern/ueber-uns/personensuche/profile/?pid=4717
+  - name: Marc Pouly
     affiliation: [1]
-    position: PhD Student
-    url: https://alvarogonjim.github.io/
-  - name: Ludovic Amruthalingam
-    affiliation: [2]
-    position: Researcher
-    url: https://www.hslu.ch/en/lucerne-university-of-applied-sciences-and-arts/about-us/people-finder/profile/?pid=5381
-  - name: Labelling Consortium
-    affiliation: [3]
-    position: Medical Experts
-    url:
-  - name: Matthew Groh
-    affiliation: [4]
-    position: Assistant Professor
-    url: https://mattgroh.com/
-  - name: Alexander A. Navarini*
-    affiliation: [1, 3]
-    position: Full Professor
-    url: https://dbe.unibas.ch/en/persons/alexander-navarini/
-  - name: Marc Pouly*
-    affiliation: [2]
-    position: Full Professor
+    position: Professor
     url: https://marcpouly.ch/
+  - name: Jennifer Foster
+    affiliation: [2]
+    position: Associate Professor
+    url: https://www.computing.dcu.ie/~jfoster/
 affiliations:
-  - University of Basel
   - Lucerne University of Applied Sciences and Arts
-  - University Hospital of Basel
-  - Northwestern University
+  - Dublin City University
 meta:
-  - '*Joint last authorship'
+  - ''
 bibtex: >
-  @article{groger_selfclean_2024,
-    title        = {{Intrinsic Self-Supervision for Data Quality Audits}},
-    shorttitle   = {{SelfClean}},
-    author       = {Gr\"oger, Fabian and Lionetti, Simone and Gottfrois, Philippe and Gonzalez-Jimenez, Alvaro and Amruthalingam, Ludovic and Consortium, Labelling and Groh, Matthew and Navarini, Alexander A. and Pouly, Marc},
-    year         = 2024,
-    month        = 12,
-    journal      = {Advances in Neural Information Processing Systems (NeurIPS)},
+  @inproceedings{wullschleger_2025_foodtaxo,
+    // Not yet published
   }
 
-teaser: SelfClean_Teaser.png
+teaser: bootstrapping.drawio.svg
 abstract: |
-  Benchmark datasets in computer vision often contain off-topic images, near duplicates, and label errors, leading to inaccurate estimates of model performance. In this paper, we revisit the task of data cleaning and formalize it as either a ranking problem, which significantly reduces human inspection effort, or a scoring problem, which allows for automated decisions based on score distributions. We find that a specific combination of context-aware self-supervised representation learning and distance-based indicators is effective in finding issues without annotation biases. This methodology, which we call SelfClean, surpasses state-of-the-art performance in detecting off-topic images, near duplicates, and label errors within widely-used image datasets, such as ImageNet-1k, Food-101N, and STL-10, both for synthetic issues and real contamination. We apply the detailed method to multiple image benchmarks, identify up to 16% of issues, and confirm an improvement in evaluation reliability upon cleaning.
-
-body:
-  - title: Data Quality Issues in Benchmarks
-    text: |
-      This section reports the results of auditing multiple vision benchmarks using SelfClean.
-      Below we estimate the number of issues in fully automatic mode.
-      Specifically the table shows the estimated percentage of data quality issues in vision benchmarks obtained using SelfClean's automatic mode with $\alpha = 0.10$ and $q = 0.05$.
-      Images marked as originating from the same person, patient or lesion were excluded from the near-duplicate count whenever available.
-
-      <div class="uk-overflow-auto uk-width-1-1">
-        <table class="uk-table uk-table-small uk-text-small uk-table-divider">
-          <thead>
-            <tr>
-              <th><b>Dataset</b></th>
-              <th><b>Size</b></th>
-              <th>Estimated<br><b>Off-topic Samples</b></th>
-              <th>Estimated<br><b>Near Duplicates</b></th>
-              <th>Estimated<br><b>Label Errors</b></th>
-              <th><b>Total</b></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colspan="6"><em>Medical Images</em></td>
-            </tr>
-            <tr>
-              <td>DDI</td>
-              <td>656</td>
-              <td>1 (0.2%)</td>
-              <td>4 (0.6%)</td>
-              <td>5 (0.8%)</td>
-              <td>10 (1.5%)</td>
-            </tr>
-            <tr>
-              <td>PAD-UFES-20</td>
-              <td>2,298</td>
-              <td>0 (0.0%)</td>
-              <td>0 (0.0%)</td>
-              <td>5 (0.4%)</td>
-              <td>5 (0.4%)</td>
-            </tr>
-            <tr>
-              <td>HAM10000</td>
-              <td>11,526</td>
-              <td>0 (0.0%)</td>
-              <td>1 (&lt;0.1%)</td>
-              <td>17 (0.2%)</td>
-              <td>18 (0.2%)</td>
-            </tr>
-            <tr>
-              <td>VinDr-BodyPartXR</td>
-              <td>16,086</td>
-              <td>263 (1.6%)</td>
-              <td>20 (0.1%)</td>
-              <td>74 (0.5%)</td>
-              <td>357 (2.2%)</td>
-            </tr>
-            <tr>
-              <td>Fitzpatrick17k</td>
-              <td>16,574</td>
-              <td>18 (0.1%)</td>
-              <td>2,446 (14.8%)</td>
-              <td>103 (0.6%)</td>
-              <td>2,567 (15.5%)</td>
-            </tr>
-            <tr>
-              <td>ISIC-2019</td>
-              <td>33,569</td>
-              <td>0 (0.0%)</td>
-              <td>1,200 (3.6%)</td>
-              <td>97 (0.3%)</td>
-              <td>1,297 (3.9%)</td>
-            </tr>
-            <tr>
-              <td>CheXpert<sup>1</sup></td>
-              <td>223,414</td>
-              <td>6 (&lt;0.1%)</td>
-              <td>0 (0.0%)</td>
-              <td>303 (0.1%)</td>
-              <td>309 (0.1%)</td>
-            </tr>
-            <tr>
-              <td>PatchCamelyon</td>
-              <td>327,680</td>
-              <td>98 (&lt;0.1%)</td>
-              <td>12,845 (3.9%)</td>
-              <td>589 (0.2%)</td>
-              <td>13,532 (4.1%)</td>
-            </tr>
-            <tr>
-              <td colspan="6"><em>General Images</em></td>
-            </tr>
-            <tr>
-              <td>STL-10</td>
-              <td>5,000</td>
-              <td>0 (0.0%)</td>
-              <td>7 (0.1%)</td>
-              <td>21 (0.4%)</td>
-              <td>28 (0.5%)</td>
-            </tr>
-            <tr>
-              <td>ImageNet-1k Validation</td>
-              <td>50,000</td>
-              <td>0 (0.0%)</td>
-              <td>36 (0.1%)</td>
-              <td>262 (0.5%)</td>
-              <td>298 (0.6%)</td>
-            </tr>
-            <tr>
-              <td>CelebA</td>
-              <td>202,599</td>
-              <td>2 (&lt;0.1%)</td>
-              <td>810 (0.4%)</td>
-              <td>1,033 (0.5%)</td>
-              <td>1,845 (0.9%)</td>
-            </tr>
-            <tr>
-              <td>Food-101N</td>
-              <td>310,009</td>
-              <td>310 (0.1%)</td>
-              <td>4,433 (1.4%)</td>
-              <td>2,728 (0.9%)</td>
-              <td>7,471 (2.4%)</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <sup>1</sup> Label errors refer to atelectasis detection only since the classification task admits multiple labels, and expert agreement is the highest for this condition.
-      <hr class="solid">
-
-      Here we illustrate the rankings by visualizing the top 15 samples of each issue type, namely off-topic samples, near duplicates, and label errors.
-      # ImageNet-1k
-
-      **Near duplicates:**
-      <img src="assets/ImageNet-1k_top15_duplicates.png" alt="">
-      <hr class="solid">
-
-      **Off-topic samples:**
-      <img src="assets/ImageNet-1k_top15_irrelevants.png" alt="">
-      <hr class="solid">
-
-      **Label errors:**
-      <img src="assets/ImageNet-1k_top15_label_errors.png" alt="">
-
-      # CheXpert
-
-      **Near duplicates:**
-      <img src="assets/CheXpert_top15_duplicates.png" alt="">
-      <hr class="solid">
-
-      **Off-topic samples:**
-      <img src="assets/CheXpert_top15_irrelevants.png" alt="">
-      <hr class="solid">
-
-      **Label errors:**
-      <img src="assets/CheXpert_top15_label_errors.png" alt="">
-
-      # PatchCamelyon
-
-      **Near duplicates:**
-      <img src="assets/PatchCamelyon_top15_duplicates.png" alt="">
-      <hr class="solid">
-
-      **Off-topic samples:**
-      <img src="assets/PatchCamelyon_top15_irrelevants.png" alt="">
-      <hr class="solid">
-
-      **Label errors:**
-      <img src="assets/PatchCamelyon_top15_label_errors.png" alt="">
-
-      # Fitzpatrick17k
-
-      **Near duplicates:**
-      <img src="assets/fitzpatrick17k_top15_duplicates.png" alt="">
-      <hr class="solid">
-
-      **Off-topic samples:**
-      <img src="assets/fitzpatrick17k_top15_irrelevants.png" alt="">
-      <hr class="solid">
-
-      **Label errors:**
-      <img src="assets/fitzpatrick17k_top15_label_errors.png" alt="">
-
-projects: # relevant projects
-  - title: PASSION for Dermatology - Bridging the Diversity Gap with Pigmented Skin Images from Sub-Saharan Africa
-    description: Images of skin diseases in Sub-Saharan countries
-    img: https://passionderm.github.io/static/images/passion1.jpg
-    journal: "MICCAI'24"
-    url: https://passionderm.github.io/
-  - title: Robust T-Loss for Medical Image Segmentation
-    description: New robust loss function, T-Loss, for medical image segmentation
-    img: https://robust-tloss.github.io/static/images/nu_tildes_ablation.png
-    journal: "MICCAI'23"
-    url: https://robust-tloss.github.io/
+  We investigate the utility of Large Language
+  Models for automated taxonomy generation
+  and completion specifically applied to tax-
+  onomies from the food technology industry. We
+  explore the extent to which taxonomies can be
+  completed from a seed taxonomy or generated
+  without a seed from a set of known concepts,
+  in an iterative fashion using recent prompting
+  techniques. Experiments on five taxonomies
+  using an open-source LLM (Llama-3), while
+  promising, point to the difficulty of correctly
+  placing inner nodes.

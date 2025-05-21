@@ -4,12 +4,8 @@ import { Helmet } from 'react-helmet';
 
 import Header from '../components/header.jsx';
 import Overview from '../components/overview.jsx';
-import Video from '../components/video.jsx';
-import Body from '../components/body.jsx';
 import Footer from '../components/footer.jsx';
 import Citation from '../components/citation.jsx';
-import SpeakerDeck from '../components/speakerdeck.jsx';
-import Projects from '../components/projects.jsx';
 import data from '../../template.yaml';
 
 class Template extends React.Component {
@@ -69,10 +65,6 @@ class Template extends React.Component {
             description={data.description}
           />
           <Citation bibtex={data.bibtex} />
-          <Video video={data.resources.video} />
-          <SpeakerDeck dataId={data.speakerdeck} />
-          <Body body={data.body} />
-          <Projects projects={data.projects} />
         </div>
         <Footer />
       </div>

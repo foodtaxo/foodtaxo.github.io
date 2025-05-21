@@ -8,7 +8,7 @@ export default class Authors extends React.Component {
 
   render() {
     // 1 column on mobile, 3 on medium screens and up
-    const authorClass = 'uk-width-1-1 uk-width-1-3@m';
+    const authorClass = 'uk-width-1-1 uk-width-1-1@m';
     const affliationClass = `uk-width-1-1`;
     return (
       <div>
@@ -28,7 +28,7 @@ export default class Authors extends React.Component {
           })}
         </div>
         <div
-          className="uk-text-primary uk-text-center uk-grid-collapse uk-margin-small-top"
+          className="uk-text-primary uk-text-center uk-grid-collapse uk-margin-medium-top"
           data-uk-grid
         >
           {this.props.affiliations.map((affiliation, idx) => {
