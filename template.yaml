@@ -5,7 +5,7 @@ title: "FoodTaxo: Generating Food Taxonomies with Large Language Models"
 journal: "ACL Industry Track 2025"
 resources:
   paper: https://aclanthology.org/2025.acl-industry.55/
-  arxiv: https://arxiv.org/abs/2505.11470
+  arxiv: https://arxiv.org/abs/2505.19838
   code: https://github.com/wullli/foodtaxo
   video: null
   demo: null
