@@ -4,8 +4,8 @@ twitter: null
 title: "FoodTaxo: Generating Food Taxonomies with Large Language Models"
 journal: "ACL Industry Track 2025"
 resources:
-  paper: null
-  arxiv: null
+  paper: https://aclanthology.org/2025.acl-industry.55/
+  arxiv: https://arxiv.org/abs/2505.11470
   code: https://github.com/wullli/foodtaxo
   video: null
   demo: null
@@ -41,8 +41,24 @@ affiliations:
 meta:
   - ''
 bibtex: >
-  @inproceedings{wullschleger_2025_foodtaxo,
-    // Not yet published
+  @inproceedings{wullschleger-etal-2025-foodtaxo,
+      title = "{F}ood{T}axo: Generating Food Taxonomies with Large Language Models",
+      author = "Wullschleger, Pascal  and
+        Zarharan, Majid  and
+        Daly, Donnacha  and
+        Pouly, Marc  and
+        Foster, Jennifer",
+      editor = "Rehm, Georg  and
+        Li, Yunyao",
+      booktitle = "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 6: Industry Track)",
+      month = jul,
+      year = "2025",
+      address = "Vienna, Austria",
+      publisher = "Association for Computational Linguistics",
+      url = "https://aclanthology.org/2025.acl-industry.55/",
+      pages = "784--803",
+      ISBN = "979-8-89176-288-6",
+      abstract = "We investigate the utility of Large Language Models for automated taxonomy generation and completion specifically applied to taxonomies from the food technology industry. We explore the extent to which taxonomies can be completed from a seed taxonomy or generated without a seed from a set of known concepts, in an iterative fashion using recent prompting techniques.Experiments on five taxonomies using an open-source LLM (Llama-3), while promising, point to the difficulty of correctly placing inner nodes."
   }
 
 teaser: bootstrapping.drawio.svg
